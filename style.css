@@ -1,3 +1,11 @@
+@font-face {
+    font-family: "Cairo";
+    src: url("fonts/Cairo-VariableFont_slnt\,wght.ttf");
+}
+
+body{
+    font-family: "Cairo", sans-serif;
+}
 .documentation-heading{
     position: relative;
     width: fit-content;
