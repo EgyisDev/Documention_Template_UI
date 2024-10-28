@@ -3,6 +3,10 @@
     src: url("fonts/Cairo-VariableFont_slnt\,wght.ttf");
 }
 
+.indexUl-top{
+    top: 70px;
+}
+
 body{
     font-family: "Cairo", sans-serif;
 }
@@ -23,3 +27,13 @@ body{
     left: 0px;
     right: 0px;
 }
+
+/* Media Query */
+
+@media (max-width: 992px){
+    .indexUl-top{
+        top: 100px;
+    }
+}
+
+
