@@ -9,7 +9,16 @@
 
 body{
     font-family: "Cairo", sans-serif;
+    transition: margin-left 0.3s;
 }
+
+.documentaiton-navbar-nav{
+    overflow-y: auto;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+}
+
 .documentation-heading{
     position: relative;
     width: fit-content;
@@ -28,12 +37,108 @@ body{
     right: 0px;
 }
 
-/* Media Query */
+.documentation-h3{
+    position: relative;
+    width: fit-content;
+    padding-top: 5px;
+    margin-bottom: 25px;
+}
 
-@media (max-width: 992px){
-    .indexUl-top{
-        top: 100px;
+.documentation-h3::after{
+    content: "";
+    width: 100%;
+    height: 3px;
+    background-color: black;
+    position: absolute;
+    bottom: -10px;
+    left: 0px;
+    right: 0px;
+}
+
+#sidebar {
+    width: 250px;
+    height: 100%;
+    margin-left: 0px;
+    display: none; /* Initially hidden for small screens */
+    position: fixed;
+    top: 0;
+    left: 0;
+    border-right: 1px solid #dee2e6;
+    overflow-y: auto;
+    transition: all 0.3s;
+}
+
+.main-content {
+    padding: 20px;
+}
+
+@media (max-width: 768px) {
+    body {
+        margin-left: 0; /* Reset margin for small screens */
+    }
+    #sidebar {
+        display: none; /* Hide sidebar */
+    }
+    .main-content {
+        margin-left: 0; /* Full width on small screens */
+    }
+    #toggleSidebar {
+        display: block; /* Show toggle button */
+    }
+}
+
+.toggle-btn {
+    position: absolute;
+    z-index: 1000;
+    top: 10px;
+    left: 10px;
+    transition: background-color 0.3s;
+}
+
+#sidebar{
+    position: absolute;
+}
+
+
+.sidebar-collapse{
+    #sidebar{
+        margin-left: -176px;
+        transition: all 0.3s;
     }
 }
 
 
+@media (max-width: 1009px) {
+    #sidebar{
+        position: absolute;
+        left: -250px;
+        margin-left: 250px;
+    }
+    .sidebar-collapse{
+        #sidebar{
+            margin-left: 72px;
+            transition: all 0.3s;
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    #sidebar{
+        position: absolute;
+        left: -250px;
+        margin-left: 0px;
+    }
+    .sidebar-collapse{
+        #sidebar{
+            margin-left: 0px;
+            transition: all 0.3s;
+        }
+    }
+}
+
+
+@media (max-width: 767px) {
+    #toggleSidebar{
+        top: 65px;
+    }
+}
