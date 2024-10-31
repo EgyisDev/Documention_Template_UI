@@ -9,7 +9,6 @@
 
 body{
     font-family: "Cairo", sans-serif;
-    transition: margin-left 0.3s;
 }
 
 .documentaiton-navbar-nav{
@@ -74,7 +73,6 @@ nav#sidebar {
     left: 0;
     border-right: 1px solid #dee2e6;
     overflow-y: auto;
-    transition: margin-left .3s ease-in-out, width .3s ease-in-out;
 }
 
 .documentation-main-content {
@@ -83,9 +81,6 @@ nav#sidebar {
 }
 
 @media (max-width: 768px) {
-    body {
-        margin-left: 0; /* Reset margin for small screens */
-    }
     nav#sidebar {
         display: none; /* Hide sidebar */
     }
@@ -105,39 +100,16 @@ nav#sidebar {
     transition: background-color 0.3s;
 }
 
-.sidebar-collapse{
-    nav#sidebar{
-        margin-left: -176px;
-        transition: margin-left .3s ease-in-out, width .3s ease-in-out;;
-    }
-}
-
 
 @media (max-width: 1009px) {
     nav#sidebar{
         position: absolute;
-        left: -250px;
-        margin-left: 250px;
-    }
-    .sidebar-collapse{
-        nav#sidebar{
-            margin-left: 72px;
-            transition: margin-left .3s ease-in-out, width .3s ease-in-out;;
-        }
     }
 }
 
 @media (max-width: 992px) {
     nav#sidebar{
         position: absolute;
-        left: -250px;
-        margin-left: 0px;
-    }
-    .sidebar-collapse{
-        nav#sidebar{
-            margin-left: 0px;
-            transition: margin-left .3s ease-in-out, width .3s ease-in-out;;
-        }
     }
 }
 
