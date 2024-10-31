@@ -4,16 +4,28 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>AdminLTE 3 | Dashboard</title>
+
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- Tempusdominus Bootstrap 4 -->
+  <link rel="stylesheet" href="plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+  <!-- iCheck -->
+  <link rel="stylesheet" href="plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+  <!-- JQVMap -->
+  <link rel="stylesheet" href="plugins/jqvmap/jqvmap.min.css">
+  <!-- Theme style -->
   <link rel="stylesheet" href="dist/css/adminlte.min.css">
   <!-- overlayScrollbars -->
   <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
-  <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  <link rel="stylesheet" href="plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css">
-  <link rel="stylesheet" href="style.css">
+  <!-- Daterange picker -->
+  <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css">
+  <!-- summernote -->
+  <link rel="stylesheet" href="plugins/summernote/summernote-bs4.min.css">
+  <link rel="stylesheet" href="../style.css">
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
@@ -197,7 +209,7 @@
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <!-- Add icons to the links using the .nav-icon class
-              with font-awesome or any other icon font library -->
+               with font-awesome or any other icon font library -->
           <li class="nav-item menu-open">
             <a href="#" class="nav-link active">
               <i class="nav-icon fas fa-tachometer-alt"></i>
@@ -837,30 +849,30 @@
   </aside>
 
   <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper">
+  <div class="content-wrapper" dir="rtl">
     <!-- Content Header (Page header) -->
-    <nav id="sidebar" dir="rtl">
-      <ul class="documentaiton-navbar-nav flex-column px-2 mt-2 documentationUl">
+  <nav id="sidebar" dir="rtl">
+      <ul class="navbar-nav flex-column px-2 mt-2 documentationUl">
           <h2 class="navbar-brand fw-bold text-center w-100 d-none d-md-block mt-2">الفهرس</h2>
-          <li class="w-fit-content mb-2"><a href="#accounts" class="text-decoration-none">الحسابات</a>
-              <ul>
-                  <li class="w-fit-content mb-2"><a href="#bankAccounts" class="text-decoration-none">الحسابات البنكية</a></li>
-                  <li class="w-fit-content mb-2"><a href="#bankClarenes" class="text-decoration-none">المقاصة البنكية</a></li>
-                  <li class="w-fit-content mb-2"><a href="#banks" class="text-decoration-none">البنوك</a></li>
+          <li class="nav-item mb-2"><a class="text-decoration-none" href="#intro">مقدمة</a></li>
+          <li class="nav-item mb-2"><a class="text-decoration-none" href="#wareHouses">المخازن</a></li>
+          <li class="nav-item mb-2"><a class="text-decoration-none" href="#itemGroups">مجموعات الاصناف</a></li>
+          <li class="nav-item mb-2"><a class="text-decoration-none" href="#items">الاصناف</a></li>
+          <li class="nav-item mb-2">
+              <a class="text-decoration-none" href="#purchaseReceipts">أذون استلام مشتريات</a>
+              <ul class="pl-3">
+                  <li class="nav-item mb-2"><a class="text-decoration-none" href="#serialsAndBatchs">ارقام الباتش / المسلسل</a></li>
               </ul>
           </li>
-          <li class="w-fit-content mb-2"><a href="#exchangeRateRevaluation" class="text-decoration-none">إعادة تقييم سعر الصرف</a></li>
-          <li class="w-fit-content mb-2"><a href="#fiscalYears" class="text-decoration-none">السنوات المالية</a></li>
-          <li class="w-fit-content mb-2"><a href="#gournalEntery" class="text-decoration-none">دفتر اليومية</a></li>
-          <li class="w-fit-content mb-2"><a href="#paymentTypes" class="text-decoration-none">أساليب الدفع</a></li>
-          <li class="w-fit-content mb-2"><a href="#paymentEntry" class="text-decoration-none">أذون السداد</a></li>
-          <li class="w-fit-content mb-2"><a href="#paymentTerms" class="text-decoration-none">شروط السداد</a></li>
-          <li class="w-fit-content mb-2"><a href="#purchaseInvoice" class="text-decoration-none">فواتير الشراء</a></li>
-          <li class="w-fit-content mb-2"><a href="#salesInvoice" class="text-decoration-none">فواتير البيع</a></li>
-          <li class="w-fit-content mb-2"><a href="#generalLedure" class="text-decoration-none">دفتر الأستاذ</a></li>
-          <li class="w-fit-content mb-2"><a href="#trilerBalance" class="text-decoration-none">ميزان المراجعة</a></li>
-          <li class="w-fit-content mb-2"><a href="#prophetAndLoss" class="text-decoration-none">قائمة الارباح والخسائر</a></li>
-          <li class="w-fit-content mb-2"><a href="#balanceSheet" class="text-decoration-none">الميزانية العمومية</a></li>
+          <li class="nav-item mb-2"><a class="text-decoration-none" href="#priceList">اسعار الاصناف</a></li>
+          <li class="nav-item mb-2"><a class="text-decoration-none" href="#delivaryNode">أذون توصيل البيع</a></li>
+          <li class="nav-item mb-2"><a class="text-decoration-none" href="#LandedCostVouchers">قسائم تكاليف البضاعة المستلمة</a></li>
+          <li class="nav-item mb-2"><a class="text-decoration-none" href="#materialRequest">طلبات الأصناف</a></li>
+          <li class="nav-item mb-2"><a class="text-decoration-none" href="#serials">الأرقام المسلسلة</a></li>
+          <li class="nav-item mb-2"><a class="text-decoration-none" href="#stockEntiries">حركات المخزون</a></li>
+          <li class="nav-item mb-2"><a class="text-decoration-none" href="#stockLedger">دفتر المخزون</a></li>
+          <li class="nav-item mb-2"><a class="text-decoration-none" href="#stockLevels">ارصدة المخزون</a></li>
+          <li class="nav-item mb-2"><a class="text-decoration-none" href="#StockReconciliations">تسوية المخزون</a></li>
       </ul>
   </nav>
 
@@ -869,290 +881,261 @@
       </span> <!-- Initial icon -->
   </button>
 
-  <div class="documentation-main-content" dir="rtl">
+  <div class="documentation-main-content text-start" dir="rtl">
       <section class="mt-5 mb-5">
-          <h2 class="text-center documentation-heading mb-5">الحسابات</h2>
-          <p>يشمل موديول الحسابات الآتي : </p>
+          <h2 id="intro" class="text-center documentation-heading mb-5">المخزون</h2>
+          <h3 class="documentation-h3">مقدمة :-</h3>
+          <p>يعد موديول المخزون العمود الفقري لموديولات أخرى مثل المشتريات والمبيعات والتصنيع….
+              فلكي يتم عمل اي دورة مشتريات او مبيعات او حتي التصنيع لا بد أولا من تعريف المخازن الخاصة بالشركة ولذا سنوضح في هذا الملف كل ما يتعلق بالمخزون….
+          </p>
+              <hr>
+      </section>
+
+      <section id="wareHouses">
+          <h2 class="text-center documentation-heading mb-5">المخازن</h2>
+          <p>يتم الدخول واختيار موديول المخزون واختيار المخازن من الشاشة الرئيسية كالتالي :</p>
+          <img src="images/Stock images/1.png" class="w-100 mb-4" alt="">
+          <p>ثم بعد ذلك ستفتح الشاشة التالية :</p>
+          <p>ومنها نختار مخزن جديد وذلك لتعريف مخزن جديد تمهيدا لاضافة الاصناف وعمل دورة مخزون كاملة كما سنرى لاحقا :</p>
+          <img src="images/Stock images/2.png" class="w-100 mb-4" alt="">
+          <p>بعد اختيار مخزن جديد سنتوجه الى الصفحة التالية :</p>
+          <img src="images/Stock images/3.png" class="w-100 mb-4" alt="">
+          <p>هنا الصفحة الخاصة بتعريف مخزن جديد</p>
+          <p>وبعد ادخال البيانات المطلوبة والتأكد منها يتم النقر على زر حفظ  وبذلك يكون قد تم تعريف 
+
+              و اضافة مخزن جديد بنجاح</p>
+          <p>ثم بعد ذلك نضيف صنف ولكن يجب اولا عمل مجموعة أصناف جديدة عن طريق الذهاب الي موديول المخزون واختيار مجموعات الأصناف</p>
+          <hr>
+      </section>
+
+      <section id="itemGroups">
+          <h2 class="text-center documentation-heading mb-5">مجموعات الاصناف</h2>
+          <img src="images/Stock images/4.png" class="w-100 mb-4" alt="">
+          <p>ثم ستفتح الصفحة التالية :</p>
+          <img src="images/Stock images/5.png" class="w-100 mb-4" alt="">
+          <p>يتم بعد ذلك النقر على مجموعة جديدة وستفتح الشاشة التالية :</p>
+          <img src="images/Stock images/6.png" class="w-100 mb-4" alt="">
+          <p>ثم بعد الانتهاء من ادخال البيانات المطلوبة يتم نقر زر حفظ </p>
+          <hr>
+      </section>
+
+      <section id="items">
+          <h2 class="text-center documentation-heading mb-5">الاصناف</h2>
+          <p>وبعد ذلك نختار قائمة الأصناف من موديول المخزون كالتالي :</p>
+          <img src="images/Stock images/7.png" class="w-100 mb-4" alt="">
+          <p>ستفتح الشاشة التالية :</p>
+          <img src="images/Stock images/8.png" class="w-100 mb-4" alt="">
+          <p>ونختار صنف جديد و سيتم توجيهنا الى الشاشة التالية :</p>
+          <img src="images/Stock images/9.png" class="w-100 mb-4" alt="">
+          <img src="images/Stock images/10.png" class="w-100 mb-4" alt="">
+          <img src="images/Stock images/11.png" class="w-100 mb-4" alt="">
+          <p>الكود: هذا هو كود الصنف الذي أدخله، مثل بطاقة تعريف.</p>
+          <p>اسم الصنف: اسم المنتج.</p>
+          <p>المجموعة: أختار نوع مجموعة الصنف، مثلًا إذا كان غذائيًا، سأختار المجموعة الغذائية.</p>
+          <p>نوع المادة: أختاره حسب طبيعة المادة، حيث تختلف وحدة القياس الافتراضية.</p>
+          <p>وحدة القياس الافتراضية: تحدد حسب طبيعة المادة، مثل زجاجة ماء تقاس بالواحدة ، وليس بالمتر أو الكيلو.</p>
+          <p>الرصيد الافتتاحي: يعني رصيد الصنف الجديد، وعادة يكون صفر عند إدخاله لأول مرة.</p>
+          <p>تكلفة الوحدة: أدخل التكلفة هنا لتعرفها عند الشراء.</p>
+          <p>سعر البيع الافتراضي: السعر المبدئي الذي أحدده للصنف.</p>
+          <p>حد الطلب: الحد الأدنى الذي يجب أن يصل إليه الصنف ليتم الطلب منه.</p>
+          <p>براند: الماركة الخاصة بالصنف.</p>
+          <p>المخزن الافتراضي: المخزن الذي تذهب إليه المشتريات تلقائيًا.</p>
+          <p>المورد الافتراضي: المورد الذي ستشتري منه الصنف تلقائيًا.</p>
+          <p>آخر سعر للشراء: آخر سعر اشترينا به، لمتابعة تطور سعر الشراء.</p>
+          <p>الحساب الافتراضي للمصروفات : الحساب الذي سيسجل فيه المصروفات الخاصة بالصنف</p>
+          <p>الأرقام المسلسلة والباتش: اذا اردنا ان نضع رقم سيريال للصنف</p>
+          <p>ثم بعد الانتهاء يتم نقر زر حفظ</p>
+      </section>
+
+      <section id="purchaseReceipts">
+          <h2 class="text-center documentation-heading mb-5">أذون استلام مشتريات</h2>
+          <p>سنستعرض الان قائمة أذون استلام مشتريات وذلك بعد عمل امر شراء وفاتورة شراء كما وضحنا سابقا بملف دورة المشتريات</p>
+          <img src="images/Stock images/12.png" class="w-100 mb-4" alt="">
+          <h3 id="serialsAndBatchs" class="documentation-h3">ارقام الباتش / المسلسل : .</h3>
+          <p>هنا قد تم عمل اذن استلام مشتريات ولكن عند النقر على المسلسل الخاص بهذا الصنف ستظهر القائمة التالية :</p>
+          <img src="images/Stock images/13.png" class="w-100 mb-4" alt="">
+          <p>ولعرض ارقام الباتش والمسلسل الخاصة بالصنف يتم الضغط على خانة عرض واختيار ارقام الباتش كما هو موضح</p>
+          <p>وعند فتح هذه القائمة تظهر الشاشة التالية والتي توضح أرقام السيريال ورقم الباتش :</p>
+          <img src="images/Stock images/14.png" class="w-100 mb-4" alt="">
+          <p>ويمكن عرض وطباعة الباركود الخاص بالصنف عن طريق الضغط علي عرض الباركود وستظهر الشاشة 
+              التالية :
+          </p>
+          <img src="images/Stock images/15.png" class="w-100 mb-4" alt="">
+          <p>ولكي يتم طباعة الباركود يتم الضغط على زر طباعة وستظهر الشاشة التالية :</p>
+          <img src="images/Stock images/16.png" class="w-100 mb-4" alt="">
+          <hr>
+      </section>
+
+      <section id="priceList">
+          <h2 class="text-center documentation-heading mb-5">اسعار الاصناف</h2>
+          <p>ولعمل سعر بيع جديد لصنف يتم الذهاب الى موديول المخزون واختيار اسعار الاصناف ومنها نختار سعر جديد وستظهر الشاشة التالية :</p>
+          <img src="images/Stock images/17.png" class="w-100 mb-4" alt="">
+          <p>ثم بعد ذلك ستظهر القائمة التالية :</p>
+          <img src="images/Stock images/18.png" class="w-100 mb-4" alt="">
+          <p>وبعد الانتهاء يتم الضغط على تسجيل</p>
+          <hr>
+      </section>
+
+      <section id="delivaryNode">
+          <h2 class="text-center documentation-heading mb-5">أذون توصيل البيع</h2>
+          <p>وهذه القائمة خاصة باذن تسليم المبيعات وقد تكلمنا عنها باستفاضة في ملف دورة المبيعات يمكنك الرجوع إليه ومراجعة الدورة بشكل مفصل </p>
+          <img src="images/Stock images/19.png" class="w-100 mb-4" alt="">
+          <hr>
+      </section>
+
+      <section id="LandedCostVouchers">
+          <h2 class="text-center documentation-heading mb-5">قسائم تكاليف البضاعة المستلمة</h2>
+          <p>قسائم تكاليف البضاعة المستلمة : وباختصار هي عبارة عن اضافة مصروف مفاجئ لم يكن في 
+              الحسبان مثل : الإكراميات أو نحوها فهي تعد مصروف يجب أن يحمل على تكلفة البضاعة وبالتالي
+          </p>
+          <p>فهذا يساعد علي معرفة التكلفة النهائية بطريقة دقيقة ممكن يساعد على إعداد قوائم مالية دقيقة تعبر 
+              عن المركز المالي للمؤسسة
+          </p>
+          <p>ولعمل قسيمة تكاليف جديدة يتم الذهاب الى موديول المخزون واختيار قسائم تكاليف البضاعة المستلمة كما هو موضح بالشكل التالي :</p>
+          <img src="images/Stock images/20.png" class="w-100 mb-4" alt="">
+          <p>ثم بعد ذلك ستفتح الشاشة التالية :</p>
+          <img src="images/Stock images/21.png" class="w-100 mb-4" alt="">
+          <p>ثم نختار اضافة قسيمة تكاليف جديدة وستظهر الشاشة التالية :</p>
+          <img src="images/Stock images/22.png" class="w-100 mb-4" alt="">
+          <p>أذون استلام المشتريات : يتم اولا اضافة صنف واختيار نوع ملف الاستلام "اذن استلام مشتريات ام فاتورة مشتريات " واختيار رقم الاذن او رقم الفاتورة  مع العلم انه يمكن اضافة اكثر من صنف كل ما عليك فعله هو فقط تحديد نوع الملف و رقمه</p>
+          <p>الرسوم المطبقة : وهي عبارة عن حساب المصروفات ويتم اختياره ووضع الوصف الخاص به وايضا تحديد قيمة الإجمالي  " مع العلم انه يمكن اضافة اكثر من صنف ايضا "</p>
+          <p>إجمالي الضرائب والرسوم بالعملة الرئيسية : وهو سيحسب تلقائيا بواسطة السيستم طبقا للمبلغ الموضوع</p>
+          <p>توزيع التكلفة بناءا على : </p>
           <ul>
-              <li>الحسابات 
-                  <ul>
-                      <li>الحسابات البنكية </li>
-                      <li>المقاصة البنكية  </li>
-                      <li>البنوك</li>
-                  </ul>
-              </li>
-              <li>إعادة تقييم سعر الصرف  </li>
-              <li>السنوات المالية </li>
-              <li>دفتر اليومية </li>
-              <li>أساليب الدفع</li>
-              <li>أذون السداد</li>
-              <li>شروط السداد</li>
-              <li>فواتير الشراء</li>
-              <li>فواتير البيع</li>
-              <li>دفتر الأستاذ</li>
-              <li>ميزان المراجعة</li>
-              <li>قائمة الارباح والخسائر</li>
-              <li>الميزانية العمومية</li>
+              <li>الكمية </li>
+              <li>الاجمالي  </li>
+              <li>توزيع يدوي </li>
+              <li>وعند الانتهاء يتم الضغط على زر حفظ </li>
           </ul>
           <hr>
       </section>
 
-      <section id="accounts">
-          <h2 class="text-center documentation-heading mb-5">الحسابات</h2>
-          <p>يتم الدخول على موديول الحسابات واختيار قائمة الحسابات كالتالي :</p>
-          <img src="images/accouns images/1.png" class="w-100 mb-4" alt="">
-          <p>ثم ستفتح الشاشة التالية : ونختار حساب جديد </p>
-          <img src="images/accouns images/2.png" class="w-100 mb-4" alt="">
-          <p>ثم بعد ذلك ستظهر الشاشة التالية : </p>
-          <img src="images/accouns images/3.png" class="w-100 mb-4" alt="">
-          <p>وثم بعد ذلك يتم إدخال البيانات المطلوبة والضغط زر حفظ </p>
+      <section id="materialRequest">
+          <h2 class="text-center documentation-heading mb-5">طلبات الأصناف</h2>
+          <p>يتم تحديد موديول المخزون واختيار قائمة طلبات الأصناف كالتالي :</p>
+          <img src="images/Stock images/23.png" class="w-100 mb-4" alt="">
+          <p>وعند فتح طلبات الاصناف تظهر الشاشة التالية :</p>
+          <img src="images/Stock images/24.png" class="w-100 mb-4" alt="">
+          <p>ثم يتم اختيار اضافة طلب وسيتم التوجه الى الشاشة التالية :</p>
+          <img src="images/Stock images/25.png" class="w-100 mb-4" alt="">
+          <p>رقم الطلب : وهو يعد تلقائيا بواسطة السيستم</p>
+          <p>تاريخ عمل الطلب : وهو يعد تلقائيا بواسطة السيستم ولكن يمكن تغييره </p>
+          <p>مطلوب بتاريخ : ويقصد به التاريخ المحدد للطلب وهو يعد تلقائيا بواسطة السيستم ولكن يمكن تغييره </p>
+          <p>المخزن الهدف : وهو المخزن الذي سيتم وضع الصنف فيه وتخزينه فور استلامه</p>
+          <p>اضافة صنف : اضافة الاصناف المرادة ويمكن اضافة اكثر من صنف في آن واحد</p>
+          <p>وعند الانتهاء يتم الضغط على زر حفظ</p>
+          <p>وسيتم الرجوع تلقائيا الى الصفحة السابقة وسيتم تعليق الطلب لحين الموافقة عليه كالتالي :</p>
+          <img src="images/Stock images/26.png" class="w-100 mb-4" alt="">
+          <p>ويمكن الدخول على اسم الصنف لتغيير حالته من معلق الى امكانية عمل امر شراء او طلب عرض سعر كما في الشاشة التالية :</p>
+          <img src="images/Stock images/27.png" class="w-100 mb-4" alt="">
+          <p>ثم بعد تحديد الأمر التالي نبدأ في عمل عرض سعر او امر شراء او طلب عرض أسعار ويمكن </p>
+          <p>الاطلاع على تفاصيل هذه الخطوات من خلال الملف الخاص بدورة المشتريات</p>
           <hr>
       </section>
 
-      <section id="bankAccounts">
-          <h2 class="text-center documentation-heading mb-5">الحسابات البنكية </h2>
-          <p>يتم فتح موديول الحسابات واختيار الحسابات البنكية كالتالي :</p>
-          <img src="images/accouns images/4.png" class="w-100 mb-4" alt="">
-          <p>ثم بعد ذلك ستفتح الشاشة التالية : </p>
-          <img src="images/accouns images/5.png" class="w-100 mb-4" alt="">
-          <p>ونختار انشاء حساب بنكي و ستظهر الشاشة التالية : </p>
-          <img src="images/accouns images/6.png" class="w-100 mb-4" alt="">
-          <p>ثم بعد إدخال البيانات المطلوبة يتم النقر على زر حفظ  </p>
+      <section id="serials">
+          <h2 class="text-center documentation-heading mb-5">الأرقام المسلسلة  </h2>
+          <p>ويمكن الاطلاع على الأرقام المسلسلة المعدة أو ما يعرف برقم السريال ويكون كالتالي:</p>
+          <p>يتم اختيار موديول المخزون وفتح قائمة الأرقام المسلسلة كالتالي:</p>
+          <img src="images/Stock images/28.png" class="w-100 mb-4" alt="">
+          <p>ويمكن عرض تفاصيل رقم السيريال عن طريق فتح تفاصيل رقم السيريال المراد</p>
           <hr>
       </section>
 
-      <section id="bankClarenes">
-          <h2 class="text-center documentation-heading mb-5">المقاصة البنكية</h2>
-          <p>تشير المقاصة إلى جميع الأنشطة من وقت الالتزام بمعاملة حتى يتم تسويتها.</p>
-          <p> تحول هذه العملية الوعد بالدفع (على سبيل المثال، في شكل شيك أو طلب دفع إلكتروني) إلى حركة فعلية للأموال من حساب إلى آخر فهي باختصار بمثابة  بيوت تطهير لتسهيل هذه المعاملات بين البنوك </p>
-          <p>ولفتح هذا الموديول يتم الذهاب الى الشاشة الرئيسية واختيار موديل الحسابات ومنه نختار المقاصة البنكية كالاتي :</p>
-          <img src="images/accouns images/7.png" class="w-100 mb-4" alt="">
-          <p>ثم بعد ذلك ستفتح الشاشة التالية :</p>
-          <img src="images/accouns images/8.png" class="w-100 mb-4" alt="">
-          <p>يتم الضغط علي زر جديد لإنشاء مقاصة بنكية وهي كالتالي : </p>
-          <img src="images/accouns images/9.png" class="w-100 mb-4" alt="">
-          <p>ثم بعد ذلك يتم إدراج البيانات التالية وبعد الانتهاء يتم الضغط زر حفظ </p>
+      <section id="stockEntiries">
+          <h2 class="text-center documentation-heading mb-5">حركات المخزون</h2>
+          <p>ويمكن تسجيل حركة مخزون وبشكل عام يجدر القول بأن أي عملية تم فيها نقل او  استلام أو خروج بضاعة من المخزون فهي تسجل تلقائيا ولعرض حركات المخزون يتم الذهاب الى موديول المخزون واختيار كالتالي :</p>
+          <img src="images/Stock images/29.png" class="w-100 mb-4" alt="">
+          <p>وعند فتح قائمة حركات المخزون تظهر الشاشة التالية ويمكن تسجيل حركة مخزون جديدة كالتالي :</p>
+          <img src="images/Stock images/30.png" class="w-100 mb-4" alt="">
+          <p>وسيتم فتح الشاشة التالية :</p>
+          <img src="images/Stock images/31.png" class="w-100 mb-4" alt="">
+          <img src="images/Stock images/32.png" class="w-100 mb-4" alt="">
+          <p>وبعد ادخال البيانات المطلوبة يتم الضغط على زر حفظ</p>
           <hr>
       </section>
 
-      <section id="banks">
-          <h2 class="text-center documentation-heading mb-5">البنوك </h2>
-          <p>ولفتح شاشة البنوك يتم فتح موديول الحسابات واختيار البنوك كالتالي :</p>
-          <img src="images/accouns images/10.png" class="w-100 mb-4" alt="">
-          <p>ثم بعد ذلك تفتح الشاشة التالية ونختار تعريف بنك جديد كالتالي :</p>
-          <img src="images/accouns images/11.png" class="w-100 mb-4" alt="">
-          <p>ثم بعد ذلك تفتح الشاشة التالية :</p>
-          <img src="images/accouns images/12.png" class="w-100 mb-4" alt="">
-          <p>ثم بعد الانتهاء يتم نقر زر حفظ </p>
+      <section id="stockLedger">
+          <h2 class="text-center documentation-heading mb-5">دفتر المخزون</h2>
+          <p>ثم بعد ذلك ستظهر الشاشة التالية تلقائيا والتي تحتوي على تفاصيل العملية وجدير بالذكر أنه يمكن عرض دفتر المخزون كالتالي :</p>
+          <img src="images/Stock images/33.png" class="w-100 mb-4" alt="">
+          <p>وسيتم فتح الصفحة التالية :</p>
+          <img src="images/Stock images/34.png" class="w-100 mb-4" alt="">
+      </section>
+
+      <section id="stockLevels">
+          <h2 class="text-center documentation-heading mb-5">ارصدة المخزون</h2>
+          <p>ويمكن عرض ارصدة المخزون او جميع المخازن الخاصة بالشركة عن طريق النزول اسفل القائمة لعرض التقارير واختيار قائمة أرصدة المخزون كالشكل التالي :</p>
+          <img src="images/Stock images/35.png" class="w-100 mb-4" alt="">
+          <p>وعند فتح قائمة ارصدة المخزون نتوجه مباشرة إلى الشاشة التالية :</p>
+          <img src="images/Stock images/36.png" class="w-100 mb-4" alt="">
+          <p>وتوضح هذه الشاشة تقرير مفصل عن جميع الأصناف والمخازن ويمكن ايضا اعداد فلتر للبحث عن طريق تحديد المخازن ومجموعات الأصناف والنقر بحث </p>
           <hr>
       </section>
 
-      <section id="exchangeRateRevaluation">
-          <h2 class="text-center documentation-heading mb-5"> إعادة تقييم سعر الصرف</h2>
-          <p>ولفتح قائمة إعادة تقييم سعر الصرف يتم فتح موديول الحسابات واختيار إعادة تقييم سعر الصرف 
-              وهي كالتالي :
+      <section id="StockReconciliations">
+          <h2 class="text-center documentation-heading mb-5">تسوية المخزون</h2>
+          <p>يتم فتح موديول المخزون واختيار قائمة تسوية المخزون كالتالي :</p>
+          <img src="images/Stock images/37.png" class="w-100 mb-4" alt="">
+          <p>ثم ستظهر الشاشة التالية : </p>
+          <img src="images/Stock images/38.png" class="w-100 mb-4" alt="">
+          <p>ولعمل تسوية جديدة ننقر على جديد وستظهر الشاشة التالية :</p>
+          <img src="images/Stock images/39.png" class="w-100 mb-4" alt="">
+          <p>المسلسل : وهو يعد تلقائيا بواسطة السيستم </p>
+          <p>تاريخ الترحيل : وهو يتم ادخاله يدويا</p>
+          <p>الغرض من التقييم : ويتم تحديده حسب الحالة وقد يكون : </p>
+          <ul>
+              <li>تسوية رصيد</li>
+              <li>رصيد افتتاحي</li>
+          </ul>
+          <p>المخزن : وتم تحديد المخزن المراد عمل التسوية به</p>
+          <p>المصروفات : وهنا يتم تحديد الحساب الخاص بالمصروفات</p>
+          <p>الاصناف : ويتم ادخال الاصناف المراد عمل تسوية لها</p>
+          <p>ويجب مراعاة البيانات قبل التسوية وبعدها</p>
+          <p>والتأكد من مطابقتها للواقع حتى لا يؤثر على أرصدة المخزون بالقوائم المالية</p>
+          <img src="images/Stock images/40.png" class="w-100 mb-4" alt="">
+          <p>وعند الانتهاء يتم الضغط على زر تسجيل وستظهر الصفحة التالية مباشرة :</p>
+          <img src="images/Stock images/41.png" class="w-100 mb-4" alt="">
+          <p>ولعرض تفاصيل هذه التسوية ستظهر الصفحة التالية :</p>
+          <img src="images/Stock images/42.png" class="w-100 mb-4" alt="">
+          <p>ويمكن عرض القيود الخاصة بهذه التسوية عن طريق نقر خانة عرض والضغط علي دفتر الاستاذ 
+              لعرضها هناك
           </p>
-          <img src="images/accouns images/13.png" class="w-100 mb-4" alt="">
-          <p>ثم بعد ذلك يتم الضغط عليها وفتح الشاشة التالية :</p>
-          <img src="images/accouns images/14.png" class="w-100 mb-4" alt="">
-          <p>ثم نختار إعادة تقييم جديد :</p>
-          <img src="images/accouns images/15.png" class="w-100 mb-4" alt="">
-          <p>ثم بعد ذلك ننقر زر حفظ </p>
-          <hr>
-      </section>
-
-      <section id="fiscalYears">
-          <h2 class="text-center documentation-heading mb-5">السنوات المالية</h2>
-          <p>لكي نفتح قائمة السنوات المالية يتم فتح موديول الحسابات ومنه نختار قائمة السنوات المالية : </p>
-          <img src="images/accouns images/16.png" class="w-100 mb-4" alt="">
-          <p>ثم بعد ذلك ستفتح الشاشة التالية : </p>
-          <img src="images/accouns images/17.png" class="w-100 mb-4" alt="">
-          <p>ثم نختار انشاء سنة مالية جديدة وستفتح القائمة التالية : </p>
-          <img src="images/accouns images/18.png" class="w-100 mb-4" alt="">
-          <p>وبعد ادخال البيانات المطلوبة يتم النقر على زر حفظ </p>
-          <hr>
-      </section>
-
-      <section id="gournalEntery">
-          <h2 class="text-center documentation-heading mb-5">دفتر اليومية </h2>
-          <p>يتم تعريف دفتر اليومية على أنه أحد أهم السجلات المحاسبية التي تبدأ بها مراحل الدورة المحاسبية </p>
-          <p>وهو عبارة عن صفحات يتم فيها تسجيل المعاملات المالية في حسابات تفصيلية، ثم إعداد القيود </p>
-          <p>المحاسبية لهذه المعاملات وأهمها القيد البسيط والمركب، ويمكن استخدام سجلات دفتر اليومية </p>
-          <p>لتسوية الحسابات الأخرى مثل دفتر الأستاذ ومن ثم ميزان المراجعة والقوائم المالية.</p>
-          <p>ولفتح دفتر اليومية يتم الذهاب الى موديول الحسابات واختيار قائمة دفتر اليومية كالتالي :</p>
-          <img src="images/accouns images/19.png" class="w-100 mb-4" alt="">
-          <p>ثم ستفتح الشاشة التالية : </p>
-          <img src="images/accouns images/20.png" class="w-100 mb-4" alt="">
-          <p>وبعد ذلك نختار انشاء قيد جديد  وهي كالتالي : </p>
-          <img src="images/accouns images/21.png" class="w-100 mb-4" alt="">
-          <p>ثم نختار إضافة قيد جديد و ستفتح النافذة التالية : </p>
-          <img src="images/accouns images/22.png" class="w-100 mb-4" alt="">
-          <p>ثم يتم إدخال البيانات الخاصة بالقيد المحاسبي مع مراعاة طرفي القيد " المدين " - " الدائن "
-              وسيظهر القيد كالتالي :
-          </p>
-          <img src="images/accouns images/23.png" class="w-100 mb-4" alt="">
-          <p>ولعرض القيود المحاسبية في دفتر الاستاذ يتم الضغط على قائمة عرض ونختار القيود المحاسبية : </p>
-          <img src="images/accouns images/24.png" class="w-100 mb-4" alt="">
-          <p>وهكذا سيظهر قيد اليومية في دفتر الأستاذ </p>
-          <hr>
-      </section>
-
-      <section id="paymentTypes">
-          <h2 class="text-center documentation-heading mb-5">أساليب الدفع </h2>
-          <p>لفتح قائمة أساليب الدفع يتم فتح موديول الحسابات واختيار أساليب الدفع كالتالي : </p>
-          <img src="images/accouns images/25.png" class="w-100 mb-4" alt="">
-          <p>ثم بعد ذلك يتم الدخول علي قائمة أساليب الدفع وستظهر الشاشة التالية : </p>
-          <img src="images/accouns images/26.png" class="w-100 mb-4" alt="">
-          <p>ونختار انشاء جديد و سنتوجه للشاشة التالية : </p>
-          <img src="images/accouns images/27.png" class="w-100 mb-4" alt="">
-          <p>ثم بعد إدخال البيانات المطلوبة يتم الضغط زر إنشاء وستظهر الشاشة التالية والتي تبين جميع 
-              أساليب الدفع المسجلة :
-          </p>
-          <img src="images/accouns images/28.png" class="w-100 mb-4" alt="">
-          <hr>
-      </section>
-
-      <section id="paymentEntry">
-          <h2 class="text-center documentation-heading mb-5"> أذون السداد</h2>
-          <p>لكي نتمكن من عرض أذون السداد نقوم بفتح موديول الحسابات واختيار أذون السداد كالتالي : </p>
-          <img src="images/accouns images/29.png" class="w-100 mb-4" alt="">
-          <p>ثم بعد ذلك ستفتح الشاشة التالية : </p>
-          <img src="images/accouns images/30.png" class="w-100 mb-4" alt="">
-          <p>ولعمل قيد سداد جديد يتم نقر زر قيد سداد جديد و سنتوجه للشاشة القادمة : </p>
-          <img src="images/accouns images/31.png" class="w-100 mb-4" alt="">
-          <img src="images/accouns images/32.png" class="w-100 mb-4" alt="">
-          <p>تاريخ القيد : وهو التاريخ المراد وضعه لهذا القيد </p>
-          <p>نوع السداد : وهو تحديد ما إذا كان استلام او دفع او قد يكون تحويل داخلي </p>
-          <p>طريقة السداد : سواء كان نقدا أو بشيك أو نحو ذلك </p>
-          <p>نوع الجهة : هل هو عميل او موظف او مورد </p>
-          <p>الجهة : وهو يتعلق بنوع الجهة فلو اخترت نوع الجهة عميل فيظهر بالجهة كل العملاء وهكذا</p>
-          <p>رصيد الجهة : وهو مجمل الرصيد الحالي للجهة المرادة </p>
-          <p>الدفع من حساب : يقصد به أي الطرف الأول للقيد و سيختلف طبقا لطبيعة عملية القيد  </p>
-          <p>الحساب المسدد إليه : وهو الطرف الثاني للقيد </p>
-          <p>رصيد الحساب : وهنا إجمالي رصيد الحساب الخاص بالجهة ( الطرف الأول ) </p>
-          <p>عملة الحساب : وهي توضع تلقائيا حسب الاعدادات المعدة سابقا للحساب نفسه ( الطرف الأول ) </p>
-          <p>سعر الصرف : وهو خاص في الحسابات التي تكون عملتها غير العملة الرئيسية للشركة ( الطرف الأول ) </p>
-          <p>رصيد الحساب : وهنا إجمالي رصيد الحساب الخاص بالجهة ( الطرف الثاني)</p>
-          <p>عملة الحساب : وهي توضع تلقائيا حسب الاعدادات المعدة سابقا للحساب نفسه ( الطرف الثاني)</p>
-          <p>سعر الصرف : وهو خاص في الحسابات التي تكون عملتها غير العملة الرئيسية للشركة ( الطرف الثاني)</p>
-          <p>المبلغ المستلم : سواء الطرف الأول للقيد أو الثاني </p>
-          <p>المبلغ المستلم (بالعملة الرئيسية) : سواء الطرف الأول للقيد أو الثاني ولكن بالعملة الرئيسية للشركة </p>
-          <p>ثم بعد الانتهاء من ادخال البيانات المطلوبة يتم الضغط على زر حفظ </p>
-          <p>وستظهر الشاشة التالية : ويمكن عرض تفاصيل القيد عن طريق نقر زر التفاصيل  </p>
-          <img src="images/accouns images/33.png" class="w-100 mb-4" alt="">
-          <hr>
-      </section>
-
-      <section id="paymentTerms">
-          <h2 class="text-center documentation-heading mb-5">شروط السداد</h2>
-          <p>ولفتح شاشة شروط السداد يتم فتح موديول الحسابات واختيار شروط السداد كالاتي : </p>
-          <img src="images/accouns images/34.png" class="w-100 mb-4" alt="">
-          <p>وستظهر الشاشة التالية : </p>
-          <img src="images/accouns images/35.png" class="w-100 mb-4" alt="">
-          <p>ثم نضغط على تسجيل بند سداد جديد و سنتوجه تلقائيا للشاشة التالية : </p>
-          <img src="images/accouns images/36.png" class="w-100 mb-4" alt="">
-          <p>عنوان بند السداد </p>
-          <p>نسبة الفاتورة : وهي النسبة المراد تحصيلها من إجمالي الفاتورة </p>
-          <p>تاريخ الاستحقاق بحسب : وهنا يتم تحديد ما إذا كان بعدد أيام من تاريخ الفاتورة او حتى ايام 
-              بعد شهر الفاتورة . 
-          </p>
-          <p>عدد أيام الائتمان : وهو يحسب بالايام حتى لو كان تاريخ الاستحقاق يحسب بالأشهر ففي هذه الحالة يتم تحويل الشهور لعدد أيام </p>
-          <p>إعدادات الخصم : وهي توضع حسب سياسة الشركة في عمليات البيع والشراء </p>
-          <p>ثم بعد الانتهاء من ادخال البيانات السابقة يتم نقر زر تسجيل </p>
-          <hr>
-      </section>
-
-      <section id="purchaseInvoice">
-          <h2 class="text-center documentation-heading mb-5">فواتير الشراء</h2>
-          <p>لفتح فواتير الشراء يتم فتح موديول الحسابات ومنه نختار فواتير الشراء كالتالي : </p>
-          <img src="images/accouns images/37.png" class="w-100 mb-4" alt="">
-          <p>وهنا ستظهر الشاشة التالية الخاصة بفواتير الشراء : </p>
-          <img src="images/accouns images/38.png" class="w-100 mb-4" alt="">
-          <p>وهنا تظهر الشاشة الخاصة بفواتير الشراء مع بيان جميع الفواتير المعدة سابقا ويمكن عرضها عن طريق 
-              المسلسل الخاص بالفاتورة 
-          </p>
-          <p>ويمكن عمل فاتورة مشتريات جديدة عن طريق الضغط على فاتورة مشتريات جديدة "يمكنك مراجعة ملف دورة المشتريات " فقد تكلمنا عنها بالتفصيل</p>
-          <hr>
-      </section>
-
-      <section id="salesInvoice">
-          <h2 class="text-center documentation-heading mb-5">فواتير البيع</h2>
-          <p>لفتح فواتير البيع يتم فتح موديول الحسابات ومنه نختار فواتير البيع كالتالي : </p>
-          <img src="images/accouns images/39.png" class="w-100 mb-4" alt="">
-          <p>وهنا ستظهر الشاشة التالية الخاصة بفواتير البيع  : </p>
-          <img src="images/accouns images/40.png" class="w-100 mb-4" alt="">
-          <p>وهنا تظهر الشاشة الخاصة بفواتير البيع مع بيان جميع الفواتير المعدة سابقا ويمكن عرضها عن طريق 
-              المسلسل الخاص بالفاتورة
-          </p>
-          <p>ويمكن عمل فاتورة بيع جديدة عن طريق الضغط على فاتورة بيع جديدة "يمكنك مراجعة ملف دورة المبيعات" </p>
-          <p>فقد تكلمنا عنها بالتفصيل</p>
-          <hr>
-      </section>
-
-      <section id="generalLedure">
-          <h2 class="text-center documentation-heading mb-5">دفتر الأستاذ</h2>
-          <p>يمكن عرض دفتر الأستاذ عن طريق النزول لأسفل الشاشة واختيار دفتر الأستاذ كالتالي : </p>
-          <img src="images/accouns images/41.png" class="w-100 mb-4" alt="">
-          <p>يمكن عرض دفتر الأستاذ عن طريق النزول لأسفل الشاشة واختيار دفتر الأستاذ كالتالي : </p>
-          <img src="images/accouns images/42.png" class="w-100 mb-4" alt="">
-          <p>ويمكن عمل بحث مفصل لعرض حساب معين عن طريق اختيار الحساب و الجهة كالتالي : </p>
-          <img src="images/accouns images/43.png" class="w-100 mb-4" alt="">
-          <hr>
-      </section>
-
-      <section id="trilerBalance">
-          <h2 class="text-center documentation-heading mb-5">ميزان المراجعة</h2>
-          <p>يمكن عرض ميزان المراجعة عن طريق النزول لأسفل الشاشة واختيار ميزان المراجعة  كالتالي : </p>
-          <img src="images/accouns images/44.png" class="w-100 mb-4" alt="">
-          <p>وستفتح الشاشة التالية : </p>
-          <img src="images/accouns images/45.png" class="w-100 mb-4" alt="">
-          <p>ويمكن عرض تفاصيل الحسابات عن طريق الضغط على ايقونة السهم والتي تظهر كالآتي : </p>
-          <img src="images/accouns images/46.png" class="w-100 mb-4" alt="">
-          <hr>
-      </section>
-
-      <section id="prophetAndLoss">
-          <h2 class="text-center documentation-heading mb-5">قائمة الارباح والخسائر</h2>
-          <p>لفتح قائمة الارباح والخسائر يتم النزول لأسفل القائمة واختيار قائمة الارباح والخسائر : </p>
-          <img src="images/accouns images/47.png" class="w-100 mb-4" alt="">
-          <p>وتظهر قائمة الارباح والخسائر بهذا الشكل : </p>
-          <img src="images/accouns images/48.png" class="w-100 mb-4" alt="">
-          <p>وعند النقر على السهم سيتم اظهار تفاصيل الأرباح والخسائر : </p>
-          <img src="images/accouns images/49.png" class="w-100 mb-4" alt="">
-          <hr>
-      </section>
-
-      <section id="balanceSheet">
-          <h2 class="text-center documentation-heading mb-5">الميزانية العمومية</h2>
-          <p>لفتح قائمة الميزانية العمومية يتم النزول لأسفل القائمة واختيار قائمة الميزانية العمومية : </p>
-          <img src="images/accouns images/50.png" class="w-100 mb-4" alt="">
-          <p>وتظهر قائمة الميزانية العمومية بهذا الشكل : </p>
-          <img src="images/accouns images/51.png" class="w-100 mb-4" alt="">
-          <p>وعند النقر على السهم سيتم اظهار تفاصيل الميزانية العمومية : </p>
-          <img src="images/accouns images/52.png" class="w-100 mb-4" alt="">
-          <img src="images/accouns images/53.png" class="w-100 mb-4" alt="">
-          <img src="images/accouns images/54.png" class="w-100 mb-4" alt="">
+          <img src="images/Stock images/43.png" class="w-100 mb-4" alt="">
+          <p>وتظهر بهذا الشكل ضمن قيود دفتر الأستاذ </p>
+          <p>وتظهر بهذا الشكل في دفتر المخزون :</p>
+          <img src="images/Stock images/44.png" class="w-100 mb-4" alt="">
           <hr>
       </section>
 
       <section class="mb-5">
           <h3 class="mb-4 documentation-h3">يمكنك مراجعة الفيديوهات التالية : </h3>
           <div>
-              <h3 class="text-center mb-4">تجهيز شروط السداد</h3>
-              <iframe class="mb-5 w-100" height="444" src="https://www.youtube.com/embed/HpZqrPi15vQ" title="Create Payment Terms - تجهيز شروط السداد" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>                    
+              <h3 class="text-center mb-4">الضرائب والرسوم</h3>
+              <iframe class="mb-5 w-100" height="444" src="https://www.youtube.com/embed/7F6_0bjcVec" title="taxes and charges" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
           </div>
           <div>
-              <h3 class="text-center mb-4">إعادة تقييم سعر الصرف</h3>
-              <iframe class="mb-5 w-100" height="444" src="https://www.youtube.com/embed/_9BIcX5lfaM" title="Exchange Rate Revaluation - إعادة تقييم سعر الصرف" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>                    
+              <h3 class="text-center mb-4">إنشاء مخزون</h3>
+              <iframe class="mb-5 w-100" height="444" src="https://www.youtube.com/embed/W2D4v3GwEz4" title="creat warehouse" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>                    
           </div>
           <div>
-              <h3 class="text-center mb-4">تسجيل مصروفات من قيد يومية</h3>
-              <iframe class="mb-5 w-100" height="444" src="https://www.youtube.com/embed/jHME3upyZFo" title="Expenses from Journal Entry - تسجيل مصروفات من قيد يومية" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>                    </div>
+              <h3 class="text-center mb-4">نقل البضائع بين المخازن</h3>
+              <iframe class="mb-5 w-100" height="444" src="https://www.youtube.com/embed/8qy1tFXu12U" title="Material Transfer - نقل البضائع بين المخازن" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>                    
+          </div>
+          <div>
+              <h3 class="text-center mb-4">إعادة تقييم المخزون</h3>
+              <iframe class="mb-5 w-100" height="444" src="https://www.youtube.com/embed/TXaTAkfLcnU" title="Stock Reconciliation - إعادة تقييم المخزون" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>                    
+          </div>
+          <div>
+              <h3 class="text-center mb-4">تعريف صنف جديد</h3>
+              <iframe class="mb-5 w-100" height="444" src="https://www.youtube.com/embed/1hlm2HrFk2Q" title="Create new item - تعريف صنف جديد" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>                    
+          </div>
+          <div>
+              <h3 class="text-center mb-4">استلام الخامات من المورد وتكويدها عند الاستلام</h3>
+              <iframe class="mb-5 w-100" height="444" src="https://www.youtube.com/embed/ycK_uD0ZssE" title="استلام الخامات من المورد وتكويدها عند الاستلام - Barcode serial labeling for purchase receipt" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>                    
+          </div>
       </section>
   </div>
-    <!-- /.content-header -->
-
-    <!-- Main content -->
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
@@ -1206,13 +1189,13 @@
 <script src="dist/js/demo.js"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="dist/js/pages/dashboard.js"></script>
-<script src="bootstrap/dist/js/bootstrap.min.js"></script>
-<script src="jquery/dist/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-<script>flatpickr(".fromDate", {mode: "range",minDate: "today" , dateFormat: "d-m-Y" , wrap: true})</script>
-<script src="wizard.js"></script>
-<script src="plugins/sweetalert2/sweetalert2.all.min.js"></script>
-<script src="main.js"></script>
+<script>
+  $(document).ready(function() {
+      $('#theme-toggle').on('click', function() {
+          $('body').toggleClass('dark-mode');
+      });
+  });
+</script>
+<script src="../main.js"></script>
 </body>
 </html>
