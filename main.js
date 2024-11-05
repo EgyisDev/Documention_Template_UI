@@ -35,3 +35,10 @@ const toggleButton = document.getElementById('toggleSidebar');
         window.addEventListener('resize', handleResize);
         // Initial check
         handleResize();
+
+    function showIframe(url) {
+        const iframe = document.getElementById('iframe');
+        const iframeContainer = document.getElementById('iframe-container');
+        iframe.src = url; // Set iframe source to the clicked menu item URL
+        iframeContainer.style.display = 'block'; // Show the iframe container
+    }

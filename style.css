@@ -78,6 +78,7 @@ nav#sidebar {
 .documentation-main-content {
     padding: 20px;
     text-align: start;
+    height: 100vh;
 }
 
 @media (max-width: 768px) {
