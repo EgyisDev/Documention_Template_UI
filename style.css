@@ -81,6 +81,44 @@ nav#sidebar {
     height: 100vh;
 }
 
+
+
+.tree-menu ul {
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+.tree-menu .caret {
+    cursor: pointer;
+    user-select: none;
+}
+
+.tree-menu .nested {
+    display: none;
+    margin-left: 20px;
+}
+
+.tree-menu .active {
+    display: block;
+}
+
+.tree-menu .caret:before {
+    content: "› ";  /* Default "right" arrow */
+    color: black;
+    font-weight: 900;
+}
+
+.tree-menu .caret-down:before{
+    content: " › ";  /* "down" arrow */
+    display: inline-block;
+    color: black;
+    font-weight: 900;
+    transform: rotate(-90deg);
+}
+
+
+
+
 @media (max-width: 768px) {
     nav#sidebar {
         display: none; /* Hide sidebar */
@@ -119,4 +157,12 @@ nav#sidebar {
     #toggleSidebar{
         top: 65px;
     }
+}
+
+nav li{
+    color: rgb(0, 128, 255);
+}
+
+nav li:hover{
+    color: rgb(2, 89, 175);
 }

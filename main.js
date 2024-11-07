@@ -42,3 +42,18 @@ const toggleButton = document.getElementById('toggleSidebar');
         iframe.src = url; // Set iframe source to the clicked menu item URL
         iframeContainer.style.display = 'block'; // Show the iframe container
     }
+
+    const carets = document.querySelectorAll('.caret');
+
+    carets.forEach(caret => {
+    caret.addEventListener('click', function() {
+        // Toggle the active class for the nested <ul>
+        const nestedList = caret.nextElementSibling;
+        if (nestedList) {
+            nestedList.classList.toggle('active');
+        }
+
+        // Toggle the caret symbol (you can use icons or change text)
+        caret.classList.toggle('caret-down');
+        });
+    });
