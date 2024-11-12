@@ -2,7 +2,7 @@ const toggleButton = document.getElementById('toggleSidebar');
         const sidebar = document.getElementById('sidebar');
         const toggleIcon = document.getElementById('toggleIcon');
 
-        toggleButton.addEventListener('click', () => {
+        toggleButton?.addEventListener('click', () => {
             const isExpanded = toggleButton.getAttribute('aria-expanded') === 'true';
 
             if (isExpanded) {
@@ -36,12 +36,30 @@ const toggleButton = document.getElementById('toggleSidebar');
         // Initial check
         handleResize();
 
-    function showIframe(url) {
-        const iframe = document.getElementById('iframe');
-        const iframeContainer = document.getElementById('iframe-container');
-        iframe.src = url; // Set iframe source to the clicked menu item URL
-        iframeContainer.style.display = 'block'; // Show the iframe container
-    }
+        function showIframe(documentationQuery) {
+            const iframe = document.getElementById('iframe');
+            let url = "/documentation-pages/Accounting/intro.html"; // Default URL
+            if(documentationQuery.startsWith("../documentation-pages")){
+                url = documentationQuery
+            }
+            else if (documentationQuery.includes("/documentation-pages/Accounting")) {
+                url = "/documentation-pages/Accounting/intro.html";
+            } else if (documentationQuery.includes("/documentation-pages/Buying-cycle")) {
+                url = "/documentation-pages/Buying-cycle/intro.html";
+            } else if (documentationQuery.includes("/documentation-pages/CRM")) {
+                url = "/documentation-pages/CRM/intro.html";
+            } else if (documentationQuery.includes("/documentation-pages/HR")) {
+                url = "/documentation-pages/HR/intro.html";
+            } else if (documentationQuery.includes("/documentation-pages/Selling-cycle")) {
+                url = "/documentation-pages/Selling-cycle/intro.html";
+            } else if (documentationQuery.includes("/documentation-pages/Stock")) {
+                url = "/documentation-pages/Stock/intro.html";
+            }
+            iframe.src = url;            
+        }
+        
+    
+        showIframe("https://localhost:44363/documentation-pages/Stock.html")
 
     const carets = document.querySelectorAll('.caret');
 
