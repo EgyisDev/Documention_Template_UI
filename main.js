@@ -55,11 +55,14 @@ const toggleButton = document.getElementById('toggleSidebar');
             } else if (documentationQuery.includes("/documentation-pages/Stock")) {
                 url = "/documentation-pages/Stock/intro.html";
             }
+            else if (documentationQuery.includes("/documentation-pages/Payroll")) {
+                url = "/documentation-pages/Payroll/intro.html";
+            }
             iframe.src = url;            
         }
         
     
-        showIframe("https://localhost:44363/documentation-pages/Stock.html")
+        showIframe("/documentation-pages/Payroll")
 
     const carets = document.querySelectorAll('.caret');
 
