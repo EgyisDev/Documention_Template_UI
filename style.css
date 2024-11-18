@@ -11,6 +11,10 @@ body{
     font-family: "Cairo", sans-serif;
 }
 
+ol , ul{
+    padding-left: 0;
+}
+
 .documentaiton-navbar-nav{
     overflow-y: auto;
     position: fixed;
@@ -81,11 +85,15 @@ nav#sidebar {
     height: 100vh;
 }
 
+.documentaion-images-styles{
+    border-radius: 20px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
 
 
 .tree-menu ul {
     list-style-type: none;
-    padding-left: 20px;
 }
 
 .tree-menu .caret {
@@ -95,7 +103,7 @@ nav#sidebar {
 
 .tree-menu .nested {
     display: none;
-    margin-left: 20px;
+    padding: 0;
 }
 
 .tree-menu .active {

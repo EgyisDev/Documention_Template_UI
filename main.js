@@ -36,33 +36,23 @@ const toggleButton = document.getElementById('toggleSidebar');
         // Initial check
         handleResize();
 
-        function showIframe(documentationQuery) {
+        let baseUrl = "https://localhost:44363/documentations/documentation-pages/index.html"
+
+
+        function showIframe(queryDestaination) {
             const iframe = document.getElementById('iframe');
-            let url = "/documentation-pages/Accounting/intro.html"; // Default URL
-            if(documentationQuery.startsWith("../documentation-pages")){
-                url = documentationQuery
-            }
-            else if (documentationQuery.includes("/documentation-pages/Accounting")) {
-                url = "/documentation-pages/Accounting/intro.html";
-            } else if (documentationQuery.includes("/documentation-pages/Buying-cycle")) {
-                url = "/documentation-pages/Buying-cycle/intro.html";
-            } else if (documentationQuery.includes("/documentation-pages/CRM")) {
-                url = "/documentation-pages/CRM/intro.html";
-            } else if (documentationQuery.includes("/documentation-pages/HR")) {
-                url = "/documentation-pages/HR/intro.html";
-            } else if (documentationQuery.includes("/documentation-pages/Selling-cycle")) {
-                url = "/documentation-pages/Selling-cycle/intro.html";
-            } else if (documentationQuery.includes("/documentation-pages/Stock")) {
-                url = "/documentation-pages/Stock/intro.html";
-            }
-            else if (documentationQuery.includes("/documentation-pages/Payroll")) {
-                url = "/documentation-pages/Payroll/intro.html";
-            }
-            iframe.src = url;            
+            let query = window.location.search 
+            queryDestaination = queryDestaination?? query.split("=")[1]
+            
+            let iframeDocumentaionSrc
+            if(query.includes("page=")){
+                iframeDocumentaionSrc = `/documentation-pages/${queryDestaination}`
+            }else{
+                iframeDocumentaionSrc = "/documentation-pages/Accounting/intro.html"
+            }         
+            iframe.src = iframeDocumentaionSrc;            
         }
-        
-    
-        showIframe("/documentation-pages/Payroll")
+        showIframe()
 
     const carets = document.querySelectorAll('.caret');
 
